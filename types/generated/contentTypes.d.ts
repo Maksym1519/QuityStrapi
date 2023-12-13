@@ -693,6 +693,11 @@ export interface ApiFooterFooter extends Schema.CollectionType {
     viber: Attribute.Media;
     telegram: Attribute.Media;
     location: Attribute.Media;
+    LTCLogo: Attribute.Media;
+    BCHlogo: Attribute.Media;
+    XRPlogo: Attribute.Media;
+    ETHlogo: Attribute.Media;
+    BTClogo: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -740,6 +745,40 @@ export interface ApiHeaderHeader extends Schema.CollectionType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::header.header',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiIconeIcone extends Schema.CollectionType {
+  collectionName: 'icones';
+  info: {
+    singularName: 'icone';
+    pluralName: 'icones';
+    displayName: 'Icones';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    edit: Attribute.Media;
+    bucket: Attribute.Media;
+    show: Attribute.Media;
+    hide: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::icone.icone',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::icone.icone',
       'oneToOne',
       'admin::user'
     > &
@@ -796,6 +835,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
+      'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
     }
   }
