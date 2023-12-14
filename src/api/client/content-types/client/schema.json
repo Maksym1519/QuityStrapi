@@ -4,7 +4,8 @@
   "info": {
     "singularName": "client",
     "pluralName": "clients",
-    "displayName": "client"
+    "displayName": "client",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,10 +19,10 @@
       "type": "email"
     },
     "phone": {
-      "type": "integer"
+      "type": "string"
     },
     "password": {
-      "type": "password"
+      "type": "string"
     }
   }
 }

@@ -683,6 +683,7 @@ export interface ApiClientClient extends Schema.CollectionType {
     singularName: 'client';
     pluralName: 'clients';
     displayName: 'client';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -690,8 +691,8 @@ export interface ApiClientClient extends Schema.CollectionType {
   attributes: {
     fullName: Attribute.String;
     email: Attribute.Email;
-    phone: Attribute.Integer;
-    password: Attribute.Password;
+    phone: Attribute.String;
+    password: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
