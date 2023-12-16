@@ -802,6 +802,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     bucket: Attribute.Media;
     show: Attribute.Media;
     hide: Attribute.Media;
+    calendar: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -857,6 +858,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
     singularName: 'profile';
     pluralName: 'profiles';
     displayName: 'profile';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -865,7 +867,8 @@ export interface ApiProfileProfile extends Schema.CollectionType {
     fullName: Attribute.String;
     email: Attribute.String;
     phone: Attribute.Integer;
-    password: Attribute.Password;
+    birthday: Attribute.String;
+    address: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

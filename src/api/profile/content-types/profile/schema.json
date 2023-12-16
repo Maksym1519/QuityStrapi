@@ -4,7 +4,8 @@
   "info": {
     "singularName": "profile",
     "pluralName": "profiles",
-    "displayName": "profile"
+    "displayName": "profile",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,8 +21,11 @@
     "phone": {
       "type": "integer"
     },
-    "password": {
-      "type": "password"
+    "birthday": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
     }
   }
 }
