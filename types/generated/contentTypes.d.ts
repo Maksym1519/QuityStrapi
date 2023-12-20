@@ -691,8 +691,8 @@ export interface ApiClientClient extends Schema.CollectionType {
   attributes: {
     fullName: Attribute.String;
     email: Attribute.Email;
-    phone: Attribute.String;
     password: Attribute.String;
+    phone: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -803,6 +803,10 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     show: Attribute.Media;
     hide: Attribute.Media;
     calendar: Attribute.Media;
+    search: Attribute.Media;
+    flag: Attribute.Media;
+    menu: Attribute.Media;
+    trolley: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -866,9 +870,9 @@ export interface ApiProfileProfile extends Schema.CollectionType {
   attributes: {
     fullName: Attribute.String;
     email: Attribute.String;
-    phone: Attribute.Integer;
     birthday: Attribute.String;
     address: Attribute.String;
+    phone: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

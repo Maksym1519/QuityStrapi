@@ -18,13 +18,13 @@
     "email": {
       "type": "string"
     },
-    "phone": {
-      "type": "integer"
-    },
     "birthday": {
       "type": "string"
     },
     "address": {
+      "type": "string"
+    },
+    "phone": {
       "type": "string"
     }
   }
