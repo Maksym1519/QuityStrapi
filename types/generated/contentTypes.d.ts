@@ -677,6 +677,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
+  collectionName: 'catalog_items';
+  info: {
+    singularName: 'catalog-item';
+    pluralName: 'catalog-items';
+    displayName: 'catalogItem';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    goodImage: Attribute.Media;
+    presence: Attribute.Boolean;
+    title: Attribute.String;
+    price: Attribute.String;
+    popularity: Attribute.Integer;
+    ths: Attribute.String;
+    w: Attribute.String;
+    jth: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog-item.catalog-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog-item.catalog-item',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiClientClient extends Schema.CollectionType {
   collectionName: 'clients';
   info: {
@@ -931,6 +969,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
       'api::client.client': ApiClientClient;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
