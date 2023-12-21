@@ -891,6 +891,28 @@ export interface ApiProfileProfile extends Schema.CollectionType {
   };
 }
 
+export interface ApiShopShop extends Schema.CollectionType {
+  collectionName: 'shops';
+  info: {
+    singularName: 'shop';
+    pluralName: 'shops';
+    displayName: 'shop';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    minersImages: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::shop.shop', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::shop.shop', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -913,6 +935,7 @@ declare module '@strapi/types' {
       'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
+      'api::shop.shop': ApiShopShop;
     }
   }
 }
