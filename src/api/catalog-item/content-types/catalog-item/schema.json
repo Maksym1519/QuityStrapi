@@ -43,6 +43,9 @@
     },
     "jth": {
       "type": "string"
+    },
+    "sort": {
+      "type": "string"
     }
   }
 }
