@@ -4,7 +4,8 @@
   "info": {
     "singularName": "shop",
     "pluralName": "shops",
-    "displayName": "shop"
+    "displayName": "shop",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,6 +13,17 @@
   "pluginOptions": {},
   "attributes": {
     "minersImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "minersIcones": {
       "allowedTypes": [
         "images",
         "files",

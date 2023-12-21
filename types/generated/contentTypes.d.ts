@@ -897,12 +897,14 @@ export interface ApiShopShop extends Schema.CollectionType {
     singularName: 'shop';
     pluralName: 'shops';
     displayName: 'shop';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     minersImages: Attribute.Media;
+    minersIcones: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
