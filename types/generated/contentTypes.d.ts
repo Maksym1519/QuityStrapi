@@ -690,14 +690,14 @@ export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
   };
   attributes: {
     goodImage: Attribute.Media;
-    presence: Attribute.Boolean;
     title: Attribute.String;
     price: Attribute.String;
-    popularity: Attribute.Integer;
     ths: Attribute.String;
     w: Attribute.String;
     jth: Attribute.String;
     sort: Attribute.String;
+    presence: Attribute.String;
+    popularity: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

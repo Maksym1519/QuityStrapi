@@ -23,17 +23,11 @@
         "audios"
       ]
     },
-    "presence": {
-      "type": "boolean"
-    },
     "title": {
       "type": "string"
     },
     "price": {
       "type": "string"
-    },
-    "popularity": {
-      "type": "integer"
     },
     "ths": {
       "type": "string"
@@ -45,6 +39,12 @@
       "type": "string"
     },
     "sort": {
+      "type": "string"
+    },
+    "presence": {
+      "type": "string"
+    },
+    "popularity": {
       "type": "string"
     }
   }
