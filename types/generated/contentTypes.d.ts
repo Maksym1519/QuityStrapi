@@ -683,6 +683,7 @@ export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
     singularName: 'catalog-gpu';
     pluralName: 'catalog-gpus';
     displayName: 'catalogGpu';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -697,6 +698,7 @@ export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
     jth: Attribute.String;
     sort: Attribute.String;
     presence: Attribute.String;
+    test: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
