@@ -717,6 +717,45 @@ export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
   };
 }
 
+export interface ApiCatalogHardCatalogHard extends Schema.CollectionType {
+  collectionName: 'catalog_hards';
+  info: {
+    singularName: 'catalog-hard';
+    pluralName: 'catalog-hards';
+    displayName: 'catalogHard';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    itemImage: Attribute.Media;
+    title: Attribute.String;
+    popularity: Attribute.String;
+    price: Attribute.String;
+    ths: Attribute.String;
+    w: Attribute.String;
+    jth: Attribute.String;
+    sort: Attribute.String;
+    presence: Attribute.String;
+    test: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog-hard.catalog-hard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog-hard.catalog-hard',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
   collectionName: 'catalog_items';
   info: {
@@ -1011,6 +1050,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
+      'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
       'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
       'api::client.client': ApiClientClient;
       'api::footer.footer': ApiFooterFooter;
