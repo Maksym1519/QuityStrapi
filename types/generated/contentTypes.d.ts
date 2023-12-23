@@ -677,6 +677,44 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
+  collectionName: 'catalog_gpus';
+  info: {
+    singularName: 'catalog-gpu';
+    pluralName: 'catalog-gpus';
+    displayName: 'catalogGpu';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    itemImage: Attribute.Media;
+    title: Attribute.String;
+    popularity: Attribute.String;
+    price: Attribute.String;
+    ths: Attribute.String;
+    w: Attribute.String;
+    jth: Attribute.String;
+    sort: Attribute.String;
+    presence: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog-gpu.catalog-gpu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog-gpu.catalog-gpu',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
   collectionName: 'catalog_items';
   info: {
@@ -970,6 +1008,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
       'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
       'api::client.client': ApiClientClient;
       'api::footer.footer': ApiFooterFooter;
