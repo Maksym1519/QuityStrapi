@@ -24,6 +24,17 @@
       ]
     },
     "minersIcones": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "advertismentBgMining": {
       "allowedTypes": [
         "images",
         "files",
@@ -31,7 +42,17 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
+    },
+    "advertismentBgRepair": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

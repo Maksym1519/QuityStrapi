@@ -926,6 +926,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     menu: Attribute.Media;
     trolley: Attribute.Media;
     shopCatalogArrow: Attribute.Media;
+    play: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1024,6 +1025,8 @@ export interface ApiShopShop extends Schema.CollectionType {
   attributes: {
     minersImages: Attribute.Media;
     minersIcones: Attribute.Media;
+    advertismentBgMining: Attribute.Media;
+    advertismentBgRepair: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
