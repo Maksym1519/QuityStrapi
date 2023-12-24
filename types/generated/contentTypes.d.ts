@@ -925,6 +925,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     flag: Attribute.Media;
     menu: Attribute.Media;
     trolley: Attribute.Media;
+    shopCatalogArrow: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
