@@ -1028,6 +1028,7 @@ export interface ApiShopShop extends Schema.CollectionType {
     minersIcones: Attribute.Media;
     advertismentBgMining: Attribute.Media;
     advertismentBgRepair: Attribute.Media;
+    paybackBg: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
