@@ -123,6 +123,17 @@
       ]
     },
     "play": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "workingStep": {
       "allowedTypes": [
         "images",
         "files",
@@ -130,7 +141,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     }
   }
 }
