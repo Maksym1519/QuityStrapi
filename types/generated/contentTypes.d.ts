@@ -928,6 +928,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     shopCatalogArrow: Attribute.Media;
     play: Attribute.Media;
     workingStep: Attribute.Media;
+    blackMessengarsIcones: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
