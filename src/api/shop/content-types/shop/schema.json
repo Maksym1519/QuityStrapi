@@ -57,6 +57,17 @@
       ]
     },
     "paybackBg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "shopScheme": {
       "allowedTypes": [
         "images",
         "files",
@@ -64,7 +75,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false
+      "multiple": true
     }
   }
 }
