@@ -1032,6 +1032,7 @@ export interface ApiShopShop extends Schema.CollectionType {
     paybackBg: Attribute.Media;
     shopSheme: Attribute.Media;
     servicesIcon: Attribute.Media;
+    couponImages: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

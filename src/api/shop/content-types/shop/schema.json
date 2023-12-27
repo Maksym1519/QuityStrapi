@@ -79,6 +79,17 @@
       ]
     },
     "servicesIcon": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "couponImages": {
       "allowedTypes": [
         "images",
         "files",
