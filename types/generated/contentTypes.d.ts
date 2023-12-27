@@ -1031,6 +1031,7 @@ export interface ApiShopShop extends Schema.CollectionType {
     advertismentBgRepair: Attribute.Media;
     paybackBg: Attribute.Media;
     shopSheme: Attribute.Media;
+    servicesIcon: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
