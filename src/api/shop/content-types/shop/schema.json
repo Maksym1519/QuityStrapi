@@ -90,6 +90,17 @@
       ]
     },
     "couponImages": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "sliderImages": {
       "allowedTypes": [
         "images",
         "files",
