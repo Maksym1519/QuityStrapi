@@ -145,6 +145,17 @@
       ]
     },
     "blackMessengarsIcones": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "questionPlus": {
       "allowedTypes": [
         "images",
         "files",
@@ -152,7 +163,17 @@
         "audios"
       ],
       "type": "media",
-      "multiple": true
+      "multiple": false
+    },
+    "questionMinus": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }
