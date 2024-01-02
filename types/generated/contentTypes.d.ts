@@ -1038,6 +1038,7 @@ export interface ApiShopShop extends Schema.CollectionType {
     couponImages: Attribute.Media;
     sliderImages: Attribute.Media;
     bonusesArrow: Attribute.Media;
+    managerAvatar: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
