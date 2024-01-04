@@ -1000,6 +1000,7 @@ export interface ApiProfileProfile extends Schema.CollectionType {
     birthday: Attribute.String;
     address: Attribute.String;
     phone: Attribute.String;
+    avatar: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
