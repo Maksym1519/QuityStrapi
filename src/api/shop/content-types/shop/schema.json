@@ -123,6 +123,17 @@
       ]
     },
     "managerAvatar": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "arrowLeft": {
       "allowedTypes": [
         "images",
         "files",
