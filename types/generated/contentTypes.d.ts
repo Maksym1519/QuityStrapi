@@ -699,6 +699,7 @@ export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
     sort: Attribute.String;
     presence: Attribute.String;
     test: Attribute.String;
+    avaEmpty: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -932,6 +933,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     questionPlus: Attribute.Media;
     questionMinus: Attribute.Media;
     prevQuestionIcon: Attribute.Media;
+    avaEmpty: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
