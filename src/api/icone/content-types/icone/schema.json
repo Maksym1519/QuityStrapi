@@ -200,6 +200,17 @@
       ]
     },
     "timeIconBlog": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "dotBlogItem": {
       "allowedTypes": [
         "images",
         "files",

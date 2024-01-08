@@ -968,6 +968,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     prevQuestionIcon: Attribute.Media;
     avaEmpty: Attribute.Media;
     timeIconBlog: Attribute.Media;
+    dotBlogItem: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
