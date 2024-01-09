@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_equipments",
+  "info": {
+    "singularName": "blog-equipment",
+    "pluralName": "blog-equipments",
+    "displayName": "blogEquipment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blogEquipmentImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "blogEquipmentCategory": {
+      "type": "string"
+    },
+    "blogEquipmentTitle": {
+      "type": "string"
+    },
+    "timeToRead": {
+      "type": "string"
+    }
+  }
+}

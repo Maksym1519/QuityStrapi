@@ -677,6 +677,40 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogEquipmentBlogEquipment extends Schema.CollectionType {
+  collectionName: 'blog_equipments';
+  info: {
+    singularName: 'blog-equipment';
+    pluralName: 'blog-equipments';
+    displayName: 'blogEquipment';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogEquipmentImage: Attribute.Media;
+    blogEquipmentCategory: Attribute.String;
+    blogEquipmentTitle: Attribute.String;
+    timeToRead: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-equipment.blog-equipment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-equipment.blog-equipment',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogItemBlogItem extends Schema.CollectionType {
   collectionName: 'blog_items';
   info: {
@@ -1104,6 +1138,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::blog-equipment.blog-equipment': ApiBlogEquipmentBlogEquipment;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
       'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
