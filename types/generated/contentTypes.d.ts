@@ -710,6 +710,40 @@ export interface ApiBlogBlockChainBlogBlockChain extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogCloudMiningBlogCloudMining
+  extends Schema.CollectionType {
+  collectionName: 'blog_cloud_minings';
+  info: {
+    singularName: 'blog-cloud-mining';
+    pluralName: 'blog-cloud-minings';
+    displayName: 'blogCloudMining';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogCloudMiningImage: Attribute.Media;
+    blogCloudMiningCategory: Attribute.String;
+    blogCloudMiningTitle: Attribute.String;
+    timeToRead: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-cloud-mining.blog-cloud-mining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-cloud-mining.blog-cloud-mining',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogEquipmentBlogEquipment extends Schema.CollectionType {
   collectionName: 'blog_equipments';
   info: {
@@ -1206,6 +1240,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog-block-chain.blog-block-chain': ApiBlogBlockChainBlogBlockChain;
+      'api::blog-cloud-mining.blog-cloud-mining': ApiBlogCloudMiningBlogCloudMining;
       'api::blog-equipment.blog-equipment': ApiBlogEquipmentBlogEquipment;
       'api::blog-investition.blog-investition': ApiBlogInvestitionBlogInvestition;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
