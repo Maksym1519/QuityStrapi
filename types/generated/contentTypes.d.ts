@@ -744,6 +744,40 @@ export interface ApiBlogEquipmentBlogEquipment extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogInvestitionBlogInvestition
+  extends Schema.CollectionType {
+  collectionName: 'blog_investitions';
+  info: {
+    singularName: 'blog-investition';
+    pluralName: 'blog-investitions';
+    displayName: 'blogInvestition';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogInvestitionImage: Attribute.Media;
+    blogInvestitionCategory: Attribute.String;
+    blogInvestitionTitle: Attribute.String;
+    timeToRead: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-investition.blog-investition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-investition.blog-investition',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogItemBlogItem extends Schema.CollectionType {
   collectionName: 'blog_items';
   info: {
@@ -1173,6 +1207,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::blog-block-chain.blog-block-chain': ApiBlogBlockChainBlogBlockChain;
       'api::blog-equipment.blog-equipment': ApiBlogEquipmentBlogEquipment;
+      'api::blog-investition.blog-investition': ApiBlogInvestitionBlogInvestition;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
       'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
