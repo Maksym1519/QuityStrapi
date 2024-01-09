@@ -13,16 +13,28 @@
   "pluginOptions": {},
   "attributes": {
     "telegramLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "telegramButtonBG": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "telegramButtonBGblue": {
       "allowedTypes": [
         "images",
         "files",

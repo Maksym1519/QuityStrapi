@@ -792,6 +792,7 @@ export interface ApiBlogImageBlogImage extends Schema.CollectionType {
   attributes: {
     telegramLogo: Attribute.Media;
     telegramButtonBG: Attribute.Media;
+    telegramButtonBGblue: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
