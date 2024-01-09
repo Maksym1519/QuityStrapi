@@ -677,6 +677,39 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogBlockChainBlogBlockChain extends Schema.CollectionType {
+  collectionName: 'blog_block_chains';
+  info: {
+    singularName: 'blog-block-chain';
+    pluralName: 'blog-block-chains';
+    displayName: 'blogBlockChain';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    blogBlockChainImage: Attribute.Media;
+    blogBlockChainCategory: Attribute.String;
+    blogBlockChainTitle: Attribute.String;
+    timeToRead: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-block-chain.blog-block-chain',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-block-chain.blog-block-chain',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogEquipmentBlogEquipment extends Schema.CollectionType {
   collectionName: 'blog_equipments';
   info: {
@@ -1138,6 +1171,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::blog-block-chain.blog-block-chain': ApiBlogBlockChainBlogBlockChain;
       'api::blog-equipment.blog-equipment': ApiBlogEquipmentBlogEquipment;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;

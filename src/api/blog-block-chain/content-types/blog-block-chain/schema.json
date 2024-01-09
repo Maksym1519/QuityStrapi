@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blog_block_chains",
+  "info": {
+    "singularName": "blog-block-chain",
+    "pluralName": "blog-block-chains",
+    "displayName": "blogBlockChain"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blogBlockChainImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "blogBlockChainCategory": {
+      "type": "string"
+    },
+    "blogBlockChainTitle": {
+      "type": "string"
+    },
+    "timeToRead": {
+      "type": "string"
+    }
+  }
+}
