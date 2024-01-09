@@ -778,6 +778,38 @@ export interface ApiBlogEquipmentBlogEquipment extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogImageBlogImage extends Schema.CollectionType {
+  collectionName: 'blog_images';
+  info: {
+    singularName: 'blog-image';
+    pluralName: 'blog-images';
+    displayName: 'blogImages';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    telegramLogo: Attribute.Media;
+    telegramButtonBG: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-image.blog-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-image.blog-image',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiBlogInvestitionBlogInvestition
   extends Schema.CollectionType {
   collectionName: 'blog_investitions';
@@ -1242,6 +1274,7 @@ declare module '@strapi/types' {
       'api::blog-block-chain.blog-block-chain': ApiBlogBlockChainBlogBlockChain;
       'api::blog-cloud-mining.blog-cloud-mining': ApiBlogCloudMiningBlogCloudMining;
       'api::blog-equipment.blog-equipment': ApiBlogEquipmentBlogEquipment;
+      'api::blog-image.blog-image': ApiBlogImageBlogImage;
       'api::blog-investition.blog-investition': ApiBlogInvestitionBlogInvestition;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
