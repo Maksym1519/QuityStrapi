@@ -851,6 +851,7 @@ export interface ApiBlogItemBlogItem extends Schema.CollectionType {
     singularName: 'blog-item';
     pluralName: 'blog-items';
     displayName: 'BlogItem';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -860,6 +861,12 @@ export interface ApiBlogItemBlogItem extends Schema.CollectionType {
     blogCategory: Attribute.String;
     blogTitle: Attribute.String;
     timeToRead: Attribute.String;
+    h2: Attribute.RichText;
+    h3: Attribute.RichText;
+    text: Attribute.Text;
+    list: Attribute.Enumeration<['a.', 'b.', 'c.']>;
+    boldText: Attribute.Text;
+    author: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -1088,6 +1095,7 @@ export interface ApiHeaderHeader extends Schema.CollectionType {
     emptyAvatar: Attribute.Media;
     warning: Attribute.Media;
     logo: Attribute.Media;
+    arrowNaviigation: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
