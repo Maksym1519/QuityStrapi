@@ -4,7 +4,8 @@
   "info": {
     "singularName": "blog-block-chain",
     "pluralName": "blog-block-chains",
-    "displayName": "blogBlockChain"
+    "displayName": "blogBlockChain",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,14 +13,15 @@
   "pluginOptions": {},
   "attributes": {
     "blogBlockChainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "blogBlockChainCategory": {
       "type": "string"
@@ -29,6 +31,36 @@
     },
     "timeToRead": {
       "type": "string"
+    },
+    "list": {
+      "type": "text"
+    },
+    "h2": {
+      "type": "richtext"
+    },
+    "h3": {
+      "type": "richtext"
+    },
+    "text1": {
+      "type": "text"
+    },
+    "boldText": {
+      "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "text2": {
+      "type": "text"
+    },
+    "listRow1": {
+      "type": "text"
+    },
+    "listRow2": {
+      "type": "text"
+    },
+    "listRow3": {
+      "type": "text"
     }
   }
 }

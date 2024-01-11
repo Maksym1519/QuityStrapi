@@ -683,6 +683,7 @@ export interface ApiBlogBlockChainBlogBlockChain extends Schema.CollectionType {
     singularName: 'blog-block-chain';
     pluralName: 'blog-block-chains';
     displayName: 'blogBlockChain';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -692,6 +693,16 @@ export interface ApiBlogBlockChainBlogBlockChain extends Schema.CollectionType {
     blogBlockChainCategory: Attribute.String;
     blogBlockChainTitle: Attribute.String;
     timeToRead: Attribute.String;
+    list: Attribute.Text;
+    h2: Attribute.RichText;
+    h3: Attribute.RichText;
+    text1: Attribute.Text;
+    boldText: Attribute.Text;
+    author: Attribute.String;
+    text2: Attribute.Text;
+    listRow1: Attribute.Text;
+    listRow2: Attribute.Text;
+    listRow3: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
