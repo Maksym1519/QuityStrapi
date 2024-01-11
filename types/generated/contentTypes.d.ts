@@ -702,7 +702,7 @@ export interface ApiBlogBlockChainBlogBlockChain extends Schema.CollectionType {
     text2: Attribute.Text;
     listRow1: Attribute.Text;
     listRow2: Attribute.Text;
-    listRow3: Attribute.Text;
+    listRow3: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

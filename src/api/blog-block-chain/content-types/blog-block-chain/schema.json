@@ -60,7 +60,7 @@
       "type": "text"
     },
     "listRow3": {
-      "type": "text"
+      "type": "string"
     }
   }
 }
