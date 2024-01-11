@@ -868,6 +868,9 @@ export interface ApiBlogItemBlogItem extends Schema.CollectionType {
     author: Attribute.String;
     text2: Attribute.Text;
     list: Attribute.Text;
+    listRow1: Attribute.Text;
+    listRow2: Attribute.Text;
+    listRow3: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

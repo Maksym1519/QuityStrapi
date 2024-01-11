@@ -52,6 +52,15 @@
     },
     "list": {
       "type": "text"
+    },
+    "listRow1": {
+      "type": "text"
+    },
+    "listRow2": {
+      "type": "text"
+    },
+    "listRow3": {
+      "type": "text"
     }
   }
 }
