@@ -863,10 +863,11 @@ export interface ApiBlogItemBlogItem extends Schema.CollectionType {
     timeToRead: Attribute.String;
     h2: Attribute.RichText;
     h3: Attribute.RichText;
-    text: Attribute.Text;
-    list: Attribute.Enumeration<['a.', 'b.', 'c.']>;
+    text1: Attribute.Text;
     boldText: Attribute.Text;
     author: Attribute.String;
+    text2: Attribute.Text;
+    list: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

@@ -38,22 +38,20 @@
     "h3": {
       "type": "richtext"
     },
-    "text": {
+    "text1": {
       "type": "text"
-    },
-    "list": {
-      "type": "enumeration",
-      "enum": [
-        "a.",
-        "b.",
-        "c."
-      ]
     },
     "boldText": {
       "type": "text"
     },
     "author": {
       "type": "string"
+    },
+    "text2": {
+      "type": "text"
+    },
+    "list": {
+      "type": "text"
     }
   }
 }
