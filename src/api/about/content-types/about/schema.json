@@ -26,6 +26,12 @@
     },
     "mainText4": {
       "type": "text"
+    },
+    "author": {
+      "type": "string"
+    },
+    "quoteText": {
+      "type": "text"
     }
   }
 }

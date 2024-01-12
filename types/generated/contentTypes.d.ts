@@ -694,6 +694,8 @@ export interface ApiAboutAbout extends Schema.CollectionType {
     mainText2: Attribute.Text;
     mainText3: Attribute.Text;
     mainText4: Attribute.Text;
+    author: Attribute.String;
+    quoteText: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
