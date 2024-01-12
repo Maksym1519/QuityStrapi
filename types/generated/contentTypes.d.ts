@@ -689,8 +689,11 @@ export interface ApiAboutAbout extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    mainTitle: Attribute.Blocks;
-    text: Attribute.Text;
+    mainTitle: Attribute.RichText;
+    mainText1: Attribute.Text;
+    mainText2: Attribute.Text;
+    mainText3: Attribute.Text;
+    mainText4: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

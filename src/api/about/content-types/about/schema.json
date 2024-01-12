@@ -13,9 +13,18 @@
   "pluginOptions": {},
   "attributes": {
     "mainTitle": {
-      "type": "blocks"
+      "type": "richtext"
     },
-    "text": {
+    "mainText1": {
+      "type": "text"
+    },
+    "mainText2": {
+      "type": "text"
+    },
+    "mainText3": {
+      "type": "text"
+    },
+    "mainText4": {
       "type": "text"
     }
   }
