@@ -696,6 +696,7 @@ export interface ApiAboutAbout extends Schema.CollectionType {
     mainText4: Attribute.Text;
     author: Attribute.String;
     quoteText: Attribute.Text;
+    reasonesIcones: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

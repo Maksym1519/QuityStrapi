@@ -32,6 +32,16 @@
     },
     "quoteText": {
       "type": "text"
+    },
+    "reasonesIcones": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
