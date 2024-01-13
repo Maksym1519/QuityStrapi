@@ -700,6 +700,8 @@ export interface ApiAboutAbout extends Schema.CollectionType {
     managerImage: Attribute.Media;
     managerQuote: Attribute.Text;
     managerName: Attribute.String;
+    telegramLogo: Attribute.Media;
+    telegramBlue: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

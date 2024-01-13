@@ -45,6 +45,34 @@
       ]
     },
     "managerImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "managerQuote": {
+      "type": "text"
+    },
+    "managerName": {
+      "type": "string"
+    },
+    "telegramLogo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "telegramBlue": {
       "allowedTypes": [
         "images",
         "files",
@@ -53,12 +81,6 @@
       ],
       "type": "media",
       "multiple": false
-    },
-    "managerQuote": {
-      "type": "text"
-    },
-    "managerName": {
-      "type": "string"
     }
   }
 }
