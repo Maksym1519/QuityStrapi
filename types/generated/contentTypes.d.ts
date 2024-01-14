@@ -1096,6 +1096,38 @@ export interface ApiClientClient extends Schema.CollectionType {
   };
 }
 
+export interface ApiContactContact extends Schema.CollectionType {
+  collectionName: 'contacts';
+  info: {
+    singularName: 'contact';
+    pluralName: 'contacts';
+    displayName: 'contacts';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    officeAddress: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::contact.contact',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiFooterFooter extends Schema.CollectionType {
   collectionName: 'footers';
   info: {
@@ -1391,6 +1423,7 @@ declare module '@strapi/types' {
       'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
       'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
       'api::client.client': ApiClientClient;
+      'api::contact.contact': ApiContactContact;
       'api::footer.footer': ApiFooterFooter;
       'api::header.header': ApiHeaderHeader;
       'api::icone.icone': ApiIconeIcone;
