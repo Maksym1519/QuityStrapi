@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "requisites",
+  "info": {
+    "singularName": "requisite",
+    "pluralName": "requisites",
+    "displayName": "requisites",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "aboutCompanyTitle": {
+      "type": "string"
+    },
+    "bankRequisiteTitle": {
+      "type": "string"
+    },
+    "nameCompany": {
+      "type": "string"
+    },
+    "idNumber": {
+      "type": "string"
+    },
+    "ogrn": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "nameBank": {
+      "type": "string"
+    },
+    "rs": {
+      "type": "string"
+    },
+    "ks": {
+      "type": "string"
+    },
+    "iban": {
+      "type": "string"
+    }
+  }
+}

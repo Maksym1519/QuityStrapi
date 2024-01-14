@@ -1288,6 +1288,48 @@ export interface ApiProfileProfile extends Schema.CollectionType {
   };
 }
 
+export interface ApiRequisiteRequisite extends Schema.CollectionType {
+  collectionName: 'requisites';
+  info: {
+    singularName: 'requisite';
+    pluralName: 'requisites';
+    displayName: 'requisites';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainTitle: Attribute.String;
+    aboutCompanyTitle: Attribute.String;
+    bankRequisiteTitle: Attribute.String;
+    nameCompany: Attribute.String;
+    idNumber: Attribute.String;
+    ogrn: Attribute.String;
+    phone: Attribute.String;
+    email: Attribute.Email;
+    nameBank: Attribute.String;
+    rs: Attribute.String;
+    ks: Attribute.String;
+    iban: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::requisite.requisite',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::requisite.requisite',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShopShop extends Schema.CollectionType {
   collectionName: 'shops';
   info: {
@@ -1354,6 +1396,7 @@ declare module '@strapi/types' {
       'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
+      'api::requisite.requisite': ApiRequisiteRequisite;
       'api::shop.shop': ApiShopShop;
     }
   }
