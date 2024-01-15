@@ -1321,6 +1321,40 @@ export interface ApiProfileProfile extends Schema.CollectionType {
   };
 }
 
+export interface ApiPublicOfferPublicOffer extends Schema.CollectionType {
+  collectionName: 'public_offers';
+  info: {
+    singularName: 'public-offer';
+    pluralName: 'public-offers';
+    displayName: 'publicOffer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    subjectText: Attribute.RichText;
+    mainTitle: Attribute.String;
+    subjectTitle: Attribute.RichText;
+    orderTitle: Attribute.RichText;
+    orderText: Attribute.RichText;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::public-offer.public-offer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::public-offer.public-offer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRequisiteRequisite extends Schema.CollectionType {
   collectionName: 'requisites';
   info: {
@@ -1430,6 +1464,7 @@ declare module '@strapi/types' {
       'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
+      'api::public-offer.public-offer': ApiPublicOfferPublicOffer;
       'api::requisite.requisite': ApiRequisiteRequisite;
       'api::shop.shop': ApiShopShop;
     }

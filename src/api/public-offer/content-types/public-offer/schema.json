@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "public_offers",
+  "info": {
+    "singularName": "public-offer",
+    "pluralName": "public-offers",
+    "displayName": "publicOffer"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "subjectText": {
+      "type": "richtext"
+    },
+    "mainTitle": {
+      "type": "string"
+    },
+    "subjectTitle": {
+      "type": "richtext"
+    },
+    "orderTitle": {
+      "type": "richtext"
+    },
+    "orderText": {
+      "type": "richtext"
+    }
+  }
+}
