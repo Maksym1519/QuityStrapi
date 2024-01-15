@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agreements",
+  "info": {
+    "singularName": "agreement",
+    "pluralName": "agreements",
+    "displayName": "agreement"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mainTitle": {
+      "type": "string"
+    },
+    "subjectTitle": {
+      "type": "richtext"
+    },
+    "subjectText": {
+      "type": "text"
+    },
+    "orderTitle": {
+      "type": "richtext"
+    },
+    "orderText": {
+      "type": "richtext"
+    }
+  }
+}
