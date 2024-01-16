@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalog_farms",
+  "info": {
+    "singularName": "catalog-farm",
+    "pluralName": "catalog-farms",
+    "displayName": "catalogFarm"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "itemImage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "title": {
+      "type": "string"
+    },
+    "popularity": {
+      "type": "string"
+    },
+    "price": {
+      "type": "string"
+    },
+    "ths": {
+      "type": "string"
+    },
+    "w": {
+      "type": "string"
+    },
+    "jth": {
+      "type": "string"
+    },
+    "sort": {
+      "type": "string"
+    },
+    "presence": {
+      "type": "string"
+    },
+    "test": {
+      "type": "string"
+    }
+  }
+}

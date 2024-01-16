@@ -977,6 +977,45 @@ export interface ApiBlogItemBlogItem extends Schema.CollectionType {
   };
 }
 
+export interface ApiCatalogFarmCatalogFarm extends Schema.CollectionType {
+  collectionName: 'catalog_farms';
+  info: {
+    singularName: 'catalog-farm';
+    pluralName: 'catalog-farms';
+    displayName: 'catalogFarm';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    itemImage: Attribute.Media;
+    title: Attribute.String;
+    popularity: Attribute.String;
+    price: Attribute.String;
+    ths: Attribute.String;
+    w: Attribute.String;
+    jth: Attribute.String;
+    sort: Attribute.String;
+    presence: Attribute.String;
+    test: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog-farm.catalog-farm',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog-farm.catalog-farm',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiCatalogGpuCatalogGpu extends Schema.CollectionType {
   collectionName: 'catalog_gpus';
   info: {
@@ -1520,6 +1559,7 @@ declare module '@strapi/types' {
       'api::blog-image.blog-image': ApiBlogImageBlogImage;
       'api::blog-investition.blog-investition': ApiBlogInvestitionBlogInvestition;
       'api::blog-item.blog-item': ApiBlogItemBlogItem;
+      'api::catalog-farm.catalog-farm': ApiCatalogFarmCatalogFarm;
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
       'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
       'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
