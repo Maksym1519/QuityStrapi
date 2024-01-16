@@ -1135,6 +1135,45 @@ export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
   };
 }
 
+export interface ApiCatalogSpareCatalogSpare extends Schema.CollectionType {
+  collectionName: 'catalog_spares';
+  info: {
+    singularName: 'catalog-spare';
+    pluralName: 'catalog-spares';
+    displayName: 'catalogSpare';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    itemImage: Attribute.Media;
+    title: Attribute.String;
+    popularity: Attribute.String;
+    price: Attribute.String;
+    ths: Attribute.String;
+    w: Attribute.String;
+    jth: Attribute.String;
+    sort: Attribute.String;
+    presence: Attribute.String;
+    test: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::catalog-spare.catalog-spare',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::catalog-spare.catalog-spare',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiClientClient extends Schema.CollectionType {
   collectionName: 'clients';
   info: {
@@ -1563,6 +1602,7 @@ declare module '@strapi/types' {
       'api::catalog-gpu.catalog-gpu': ApiCatalogGpuCatalogGpu;
       'api::catalog-hard.catalog-hard': ApiCatalogHardCatalogHard;
       'api::catalog-item.catalog-item': ApiCatalogItemCatalogItem;
+      'api::catalog-spare.catalog-spare': ApiCatalogSpareCatalogSpare;
       'api::client.client': ApiClientClient;
       'api::contact.contact': ApiContactContact;
       'api::footer.footer': ApiFooterFooter;
