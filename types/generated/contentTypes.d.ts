@@ -1431,6 +1431,37 @@ export interface ApiRequisiteRequisite extends Schema.CollectionType {
   };
 }
 
+export interface ApiReturnReturn extends Schema.CollectionType {
+  collectionName: 'returns';
+  info: {
+    singularName: 'return';
+    pluralName: 'returns';
+    displayName: 'return';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    mainTitle: Attribute.String;
+    text: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::return.return',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::return.return',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiShopShop extends Schema.CollectionType {
   collectionName: 'shops';
   info: {
@@ -1501,6 +1532,7 @@ declare module '@strapi/types' {
       'api::profile.profile': ApiProfileProfile;
       'api::public-offer.public-offer': ApiPublicOfferPublicOffer;
       'api::requisite.requisite': ApiRequisiteRequisite;
+      'api::return.return': ApiReturnReturn;
       'api::shop.shop': ApiShopShop;
     }
   }
