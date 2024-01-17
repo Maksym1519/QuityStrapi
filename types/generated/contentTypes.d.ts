@@ -1108,7 +1108,7 @@ export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    goodImage: Attribute.Media;
+    itemImage: Attribute.Media;
     title: Attribute.String;
     price: Attribute.String;
     ths: Attribute.String;
