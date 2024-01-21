@@ -1351,6 +1351,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     geotag: Attribute.Media;
     filterAttention: Attribute.Media;
     filterBird: Attribute.Media;
+    filterCondition: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
