@@ -1349,6 +1349,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     dotBlogItem: Attribute.Media;
     geotag: Attribute.Media;
     filterAttention: Attribute.Media;
+    filterBird: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
