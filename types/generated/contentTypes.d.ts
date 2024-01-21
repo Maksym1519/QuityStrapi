@@ -1117,6 +1117,7 @@ export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
     sort: Attribute.String;
     presence: Attribute.String;
     popularity: Attribute.String;
+    condition: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

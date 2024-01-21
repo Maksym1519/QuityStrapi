@@ -46,6 +46,9 @@
     },
     "popularity": {
       "type": "string"
+    },
+    "condition": {
+      "type": "string"
     }
   }
 }
