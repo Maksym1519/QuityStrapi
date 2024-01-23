@@ -52,6 +52,9 @@
     },
     "profit": {
       "type": "integer"
+    },
+    "maker": {
+      "type": "string"
     }
   }
 }
