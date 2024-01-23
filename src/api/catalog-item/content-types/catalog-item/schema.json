@@ -49,6 +49,9 @@
     },
     "condition": {
       "type": "string"
+    },
+    "profit": {
+      "type": "integer"
     }
   }
 }
