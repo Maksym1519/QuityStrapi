@@ -1120,6 +1120,7 @@ export interface ApiCatalogItemCatalogItem extends Schema.CollectionType {
     condition: Attribute.String;
     profit: Attribute.Integer;
     maker: Attribute.String;
+    algorithm: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

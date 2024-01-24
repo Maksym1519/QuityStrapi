@@ -55,6 +55,9 @@
     },
     "maker": {
       "type": "string"
+    },
+    "algorithm": {
+      "type": "string"
     }
   }
 }
