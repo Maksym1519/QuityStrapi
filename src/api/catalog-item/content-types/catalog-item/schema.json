@@ -58,6 +58,16 @@
     },
     "algorithm": {
       "type": "string"
+    },
+    "sliderMiniatur": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }
