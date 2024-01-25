@@ -310,6 +310,17 @@
       ]
     },
     "whiteBucket": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "locationIcon": {
       "allowedTypes": [
         "images",
         "files",

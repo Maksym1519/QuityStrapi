@@ -1361,6 +1361,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     star: Attribute.Media;
     chatIcon: Attribute.Media;
     whiteBucket: Attribute.Media;
+    locationIcon: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
