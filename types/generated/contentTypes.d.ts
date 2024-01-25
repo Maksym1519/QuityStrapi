@@ -1358,6 +1358,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     filterCondition: Attribute.Media;
     sliderPrev: Attribute.Media;
     sliderNext: Attribute.Media;
+    star: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
