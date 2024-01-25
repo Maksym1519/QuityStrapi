@@ -1360,6 +1360,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     sliderNext: Attribute.Media;
     star: Attribute.Media;
     chatIcon: Attribute.Media;
+    whiteBucket: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
