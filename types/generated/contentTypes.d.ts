@@ -1355,6 +1355,8 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     filterAttention: Attribute.Media;
     filterBird: Attribute.Media;
     filterCondition: Attribute.Media;
+    sliderPrev: Attribute.Media;
+    sliderNext: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
