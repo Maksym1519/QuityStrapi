@@ -321,6 +321,17 @@
       ]
     },
     "locationIcon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "chartIcon": {
       "allowedTypes": [
         "images",
         "files",
