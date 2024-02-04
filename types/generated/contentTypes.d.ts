@@ -1366,6 +1366,7 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     courseState: Attribute.Media;
     bucketActive: Attribute.Media;
     close: Attribute.Media;
+    attentionTriangle: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

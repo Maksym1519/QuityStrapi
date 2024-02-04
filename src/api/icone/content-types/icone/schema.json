@@ -365,6 +365,17 @@
       ]
     },
     "close": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "attentionTriangle": {
       "allowedTypes": [
         "images",
         "files",
