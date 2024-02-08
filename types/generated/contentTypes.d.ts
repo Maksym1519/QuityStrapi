@@ -1327,12 +1327,14 @@ export interface ApiHostingHosting extends Schema.CollectionType {
     singularName: 'hosting';
     pluralName: 'hostings';
     displayName: 'hosting';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     deployVideo: Attribute.Media;
+    deployBlueBg: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

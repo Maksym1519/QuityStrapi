@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hosting",
     "pluralName": "hostings",
-    "displayName": "hosting"
+    "displayName": "hosting",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,6 +13,17 @@
   "pluginOptions": {},
   "attributes": {
     "deployVideo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "deployBlueBg": {
       "allowedTypes": [
         "images",
         "files",
