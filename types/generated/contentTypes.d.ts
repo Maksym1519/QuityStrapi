@@ -1337,6 +1337,8 @@ export interface ApiHostingHosting extends Schema.CollectionType {
     deployBlueBg: Attribute.Media;
     casesImage: Attribute.Media;
     deployInfoArrow: Attribute.Media;
+    hostingCalendar: Attribute.Media;
+    hostingTime: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
