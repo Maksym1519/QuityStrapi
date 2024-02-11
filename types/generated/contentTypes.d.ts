@@ -1522,6 +1522,41 @@ export interface ApiPublicOfferPublicOffer extends Schema.CollectionType {
   };
 }
 
+export interface ApiQuickDeployQuickDeploy extends Schema.CollectionType {
+  collectionName: 'quick_deploys';
+  info: {
+    singularName: 'quick-deploy';
+    pluralName: 'quick-deploys';
+    displayName: 'quickDeploy';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    circleBg: Attribute.Media;
+    icon: Attribute.Media;
+    title: Attribute.Blocks;
+    text: Attribute.Blocks;
+    link: Attribute.Blocks;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::quick-deploy.quick-deploy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::quick-deploy.quick-deploy',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiRequisiteRequisite extends Schema.CollectionType {
   collectionName: 'requisites';
   info: {
@@ -1667,6 +1702,7 @@ declare module '@strapi/types' {
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
       'api::public-offer.public-offer': ApiPublicOfferPublicOffer;
+      'api::quick-deploy.quick-deploy': ApiQuickDeployQuickDeploy;
       'api::requisite.requisite': ApiRequisiteRequisite;
       'api::return.return': ApiReturnReturn;
       'api::shop.shop': ApiShopShop;

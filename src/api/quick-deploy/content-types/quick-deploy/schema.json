@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "quick_deploys",
+  "info": {
+    "singularName": "quick-deploy",
+    "pluralName": "quick-deploys",
+    "displayName": "quickDeploy",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "circleBg": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "title": {
+      "type": "blocks"
+    },
+    "text": {
+      "type": "blocks"
+    },
+    "link": {
+      "type": "blocks"
+    }
+  }
+}
