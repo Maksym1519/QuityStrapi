@@ -35,13 +35,13 @@
       ]
     },
     "title": {
-      "type": "blocks"
+      "type": "string"
     },
     "text": {
-      "type": "blocks"
+      "type": "string"
     },
     "link": {
-      "type": "blocks"
+      "type": "string"
     }
   }
 }

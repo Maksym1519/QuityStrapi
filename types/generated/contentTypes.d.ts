@@ -1536,9 +1536,9 @@ export interface ApiQuickDeployQuickDeploy extends Schema.CollectionType {
   attributes: {
     circleBg: Attribute.Media;
     icon: Attribute.Media;
-    title: Attribute.Blocks;
-    text: Attribute.Blocks;
-    link: Attribute.Blocks;
+    title: Attribute.String;
+    text: Attribute.String;
+    link: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
