@@ -4,7 +4,8 @@
   "info": {
     "singularName": "hosting-video-info",
     "pluralName": "hosting-video-infos",
-    "displayName": "hostingVideoInfo"
+    "displayName": "hostingVideoInfo",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -17,34 +18,43 @@
     "subTitle": {
       "type": "string"
     },
-    "itemTitle": {
-      "type": "string"
-    },
     "itemText": {
       "type": "string"
     },
     "icon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "play": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "playText": {
       "type": "string"
+    },
+    "video": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

@@ -1434,6 +1434,7 @@ export interface ApiHostingVideoInfoHostingVideoInfo
     singularName: 'hosting-video-info';
     pluralName: 'hosting-video-infos';
     displayName: 'hostingVideoInfo';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -1441,11 +1442,11 @@ export interface ApiHostingVideoInfoHostingVideoInfo
   attributes: {
     title: Attribute.String;
     subTitle: Attribute.String;
-    itemTitle: Attribute.String;
     itemText: Attribute.String;
     icon: Attribute.Media;
     play: Attribute.Media;
     playText: Attribute.String;
+    video: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
