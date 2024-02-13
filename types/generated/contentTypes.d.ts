@@ -1391,6 +1391,42 @@ export interface ApiHostingSchemeHostingScheme extends Schema.CollectionType {
   };
 }
 
+export interface ApiHostingTermHostingTerm extends Schema.CollectionType {
+  collectionName: 'hosting_terms';
+  info: {
+    singularName: 'hosting-term';
+    pluralName: 'hosting-terms';
+    displayName: 'hostingTerm';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    icon: Attribute.Media;
+    itemTitle: Attribute.String;
+    itemText: Attribute.String;
+    itemLink: Attribute.String;
+    mainImage: Attribute.Media;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hosting-term.hosting-term',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hosting-term.hosting-term',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIconeIcone extends Schema.CollectionType {
   collectionName: 'icones';
   info: {
@@ -1733,6 +1769,7 @@ declare module '@strapi/types' {
       'api::header.header': ApiHeaderHeader;
       'api::hosting.hosting': ApiHostingHosting;
       'api::hosting-scheme.hosting-scheme': ApiHostingSchemeHostingScheme;
+      'api::hosting-term.hosting-term': ApiHostingTermHostingTerm;
       'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
