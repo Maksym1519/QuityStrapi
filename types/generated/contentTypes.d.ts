@@ -1427,6 +1427,43 @@ export interface ApiHostingTermHostingTerm extends Schema.CollectionType {
   };
 }
 
+export interface ApiHostingVideoInfoHostingVideoInfo
+  extends Schema.CollectionType {
+  collectionName: 'hosting_video_infos';
+  info: {
+    singularName: 'hosting-video-info';
+    pluralName: 'hosting-video-infos';
+    displayName: 'hostingVideoInfo';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    subTitle: Attribute.String;
+    itemTitle: Attribute.String;
+    itemText: Attribute.String;
+    icon: Attribute.Media;
+    play: Attribute.Media;
+    playText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::hosting-video-info.hosting-video-info',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::hosting-video-info.hosting-video-info',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiIconeIcone extends Schema.CollectionType {
   collectionName: 'icones';
   info: {
@@ -1770,6 +1807,7 @@ declare module '@strapi/types' {
       'api::hosting.hosting': ApiHostingHosting;
       'api::hosting-scheme.hosting-scheme': ApiHostingSchemeHostingScheme;
       'api::hosting-term.hosting-term': ApiHostingTermHostingTerm;
+      'api::hosting-video-info.hosting-video-info': ApiHostingVideoInfoHostingVideoInfo;
       'api::icone.icone': ApiIconeIcone;
       'api::product.product': ApiProductProduct;
       'api::profile.profile': ApiProfileProfile;
