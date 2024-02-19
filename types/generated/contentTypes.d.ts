@@ -1511,6 +1511,8 @@ export interface ApiIconeIcone extends Schema.CollectionType {
     bucketActive: Attribute.Media;
     close: Attribute.Media;
     attentionTriangle: Attribute.Media;
+    lightBucket: Attribute.Media;
+    report: Attribute.Media;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
