@@ -1195,6 +1195,9 @@ export interface ApiClientClient extends Schema.CollectionType {
     email: Attribute.Email;
     password: Attribute.String;
     phone: Attribute.String;
+    address: Attribute.String;
+    avatar: Attribute.Media;
+    birthday: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
